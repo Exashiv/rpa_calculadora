@@ -1,0 +1,13 @@
+--- 
+before_script: 
+  - "autopep8 -ir *"
+  - "flake8 --max-complexity=15 --exclude=*.txt,*.md *"
+install: 
+  - "pip install -r requirements.txt"
+language: python
+notifications: 
+  email: false
+python: 
+  - "2.7"
+script: 
+  - "lettuce tests/"
